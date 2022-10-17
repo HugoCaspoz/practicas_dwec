@@ -8,9 +8,15 @@ let alumno = {
 
 function removeUndefined(a){
 
-    let clone = Object.assign(a);
-        
+    let newObj = {};
+
+    for( let i in a){
+        if (a[i] != undefined){
+            newObj[i] = a[i];
+        }
+    }
+    return newObj;
     
     };
         
-        console.log (removeUndefined(ciclo, alumno));
+        console.log (removeUndefined(ciclo));

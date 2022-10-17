@@ -1,7 +1,7 @@
 function cloneObject ( obj ){
 
-        let clone = Object.assign( obj );
-        console.log(clone);
+        let clone = Object.assign( {}, obj );
+        return (clone);
 
         };
         
