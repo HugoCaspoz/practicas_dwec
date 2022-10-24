@@ -6,7 +6,7 @@ function convertBase( str , baseFrom, baseTo ){
 
     console.log(str.toString(baseFrom));
 
-    return (str.toString(baseTo));
+    return (str, baseFrom).toString(baseTo);
     
     };
 
