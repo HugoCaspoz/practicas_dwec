@@ -30,17 +30,13 @@ let arr = [
 ];
 
 
-function addNif ( arr ){
-    letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
+function getAverageGrade ( str ){
+    media = 0;
     arr.forEach( (alumno) => {
-        letra = letras.substring(alumno.dni % 23, alumno.dni % 23+1 );
-        nif = alumno.dni + letra;
-        alumno.nif = nif;
-        delete alumno.dni;
+    media = media + alumno.notas.DIW;    
     });
-
-    return arr;
+    media = media / 2;
+    return media;
     
 }
-    console.log (addNif (arr));
-        
+    console.log (getAverageGrade ('DIW'));
