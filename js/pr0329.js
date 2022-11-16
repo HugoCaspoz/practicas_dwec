@@ -1,12 +1,12 @@
 function getAverages(array){
     return array.map((item) => {
         let notas = item['notas'];
-        console.log(notas);
         let media = 0;
         for ( let key in notas ){
             media += notas[key];
         }
-        media = media / 3;
+        media = media / notas.length;
+
         return "alumno: " + item.nombre + " " + item.ape1 + " " + item.ape2 +
             ", expediente: " + item.expediente +
             " nota_media: " + media;
