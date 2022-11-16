@@ -1,3 +1,11 @@
+function getNumberOfAlumnos( array, str ){
+    return array.reduce((acum, item) => {
+        if(item.ciclo == str){
+            return ++ acum;
+        }
+    }, 0);
+}
+
 let arr = [
     {
         nombre: 'Pepe',
@@ -27,20 +35,6 @@ let arr = [
             DWES: 4
         }
     }
-];
+]
 
-
-function addNif ( arr ){
-    letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-    arr.forEach( (alumno) => {
-        letra = letras.substring(alumno.dni % 23, alumno.dni % 23+1 );
-        nif = alumno.dni + letra;
-        alumno.nif = nif;
-        delete alumno.dni;
-    });
-
-    return arr;
-    
-}
-    console.log (addNif (arr));
-        
+console.log(getNumberOfAlumnos(arr, 'DAW'));

@@ -30,17 +30,22 @@ let arr = [
 ];
 
 
-function addNif ( arr ){
-    letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-    arr.forEach( (alumno) => {
-        letra = letras.substring(alumno.dni % 23, alumno.dni % 23+1 );
-        nif = alumno.dni + letra;
-        alumno.nif = nif;
-        delete alumno.dni;
-    });
 
-    return arr;
-    
-}
-    console.log (addNif (arr));
+function getAlumnosByCiclo ( arr , ciclo ){
+    /*arr.forEach( (alumno) => {
+        if (alumno.ciclo==str){
+            curso = (alumno.nombre && alumno.ape1 && alumno.ape2);
+        };    
+        });
+        return curso;*/
         
+        let users = arr.filter( item => item.ciclo == ciclo );
+
+        let nombres = users.map( item => {
+            item.co
+        });
+        return (nombres);
+
+
+}
+    console.log (getAlumnosByCiclo (arr , 'DAW'));

@@ -1,3 +1,19 @@
+function getAverages(array){
+    return array.map((item) => {
+        let notas = item['notas'];
+        console.log(notas);
+        let media = 0;
+        for ( let key in notas ){
+            media += notas[key];
+        }
+        media = media / 3;
+        return "alumno: " + item.nombre + " " + item.ape1 + " " + item.ape2 +
+            ", expediente: " + item.expediente +
+            " nota_media: " + media;
+    });
+        
+}
+
 let arr = [
     {
         nombre: 'Pepe',
@@ -27,20 +43,6 @@ let arr = [
             DWES: 4
         }
     }
-];
-
-
-function addNif ( arr ){
-    letras = 'TRWAGMYFPDXBNJZSQVHLCKE';
-    arr.forEach( (alumno) => {
-        letra = letras.substring(alumno.dni % 23, alumno.dni % 23+1 );
-        nif = alumno.dni + letra;
-        alumno.nif = nif;
-        delete alumno.dni;
-    });
-
-    return arr;
+    ]
     
-}
-    console.log (addNif (arr));
-        
+    console.log(getAverages(arr));
